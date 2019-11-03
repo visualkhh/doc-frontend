@@ -24,6 +24,13 @@ display:flow-root 해주면된다.(독립적으로 나눠진다)
 부모:after 로 
 content 주고 displat:block; clear:both; 모드로주면된다
 
+뜨게되는 float는  부모입장에서 크기를 잃어버리기때문에  부모쪽에서 자식 float의 컨텐츠내용을 인식하려면 아래처럼 해줘야한다.
+.container:after {
+    content:' '
+    display:block;
+    clear:both; 
+}처리하여 컨텐츠 크기로 감싼다
+
 패딩값을주게되면 컨텐츠 사이즈 + 가 되는데 그걸 포함시키게하고싶으면
 box-sizing: border-box; 하면된다.
 
@@ -31,6 +38,8 @@ margin: 0 auto 하게되면 위아래는 0px 양옆은 남은 거 나눠서
 중간 정렬된다;
 마진을 -값으로 줘서 네거티브로 할수도있다.
 
+글씨 높이 줄간견
+line-height: 1.5
 
 transition: all .5s
 하여 애니메이션을 줄수있다
@@ -54,7 +63,7 @@ width를  max-width하여  최대width값으로 할수도있다.
 
 position
  absolute: 절대 위로뜨고 크기가 컨텐츠 사이즈만큼켜진다.    부모의 상대적인부분에서 절대적
- relative: 상대
+ relative: 상대; 위로 뜬다.
  fixed: 전체스크롤에 영향받지않음
 
 transform
@@ -84,7 +93,7 @@ background-position: right 20px center;
 background-size: auto 30px;
 background-attachment: fixed 백그라운드를 전체 픽스로.
 background-repeat: no-repeat;
-
+background-size: cover;
 
 overflow
 overflow: scroll 하게되면 부모의 크기만큼 보여준다. 넘어가는거 안보임. 그외는 스크롤
@@ -98,6 +107,10 @@ boarder-radius: 20px
 boarder-radius: 50% / 25%  가로 50% 세로 25%
 boarder-left: 3px solid #ddd;
 boarder-left-color: orange;
+boarder-bottom:none;
+boarder-width: 30px 30px 0 30px;
+boarder-style solid;
+
 
 clear
 - float clear 한다
