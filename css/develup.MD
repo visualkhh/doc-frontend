@@ -14,6 +14,11 @@ li {
     list-style-type:none;
 }
 
+display
+    display:block;  //블록요소
+    display:inline; //인라인요소
+    display:inline-block; 인라인이면서 블록인 요소
+
 위치이동 float
 float를 하게되면 부모의 크기가 없어진다 그래서
 float되면 위로뜬다., 안쪽 레이아웃은 그대로지만 컨텐츠는 어울리게된다 (같은 선상에있다) 하지만
@@ -95,6 +100,16 @@ background-attachment: fixed 백그라운드를 전체 픽스로.
 background-repeat: no-repeat;
 background-size: cover;
 
+/* 특별 키워드 값 */
+background-color: currentcolor;
+background-color: transparent;
+
+/* 전역 값 */
+background-color: inherit;
+background-color: initial;
+background-color: unset;
+
+
 overflow
 overflow: scroll 하게되면 부모의 크기만큼 보여준다. 넘어가는거 안보임. 그외는 스크롤
 overflow: hidden 하게되면 float당할때 그대로레이아웃을 유지한다.(시작점이 앞 요소의 끝점에서 시작)
@@ -158,11 +173,15 @@ animation-timing-function: linear; //가속도
 animation-direction: alternate;   방향 애니메이션
 
 
+align
+ vertical-align: bottom;  수직정렬 -> 아래 기준으로 정렬 
+
 
 
 
 z-index
 
-:hover
-:after
-:before
+:hover //호버됐을때
+:after //자식의 마지막 요소
+:before // 자식의 첫번째 요소
+:active  //엑티브됐을때
