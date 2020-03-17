@@ -54,6 +54,9 @@ transition-delay: .5s
 box-shadow: 0 0 40px rgba(0,0,0,0.2);
 
 
+width
+ auto 하면  margin padding을 고려한뒤  오토로 처리한다.
+
 width를  max-width하여  최대width값으로 할수도있다.
 반응형 하기 좋다.
 
@@ -133,6 +136,14 @@ clear:left
 
 text
 text-indent: -999px  들여쓰기  하고 overflow:hidden 해주면 안보인다.
+text-decoration: none | line-through | overline | underline | initial | inherit
+none : 선을 만들지 않습니다.
+line-through : 글자 중간에 선을 만듭니다.
+overline : 글자 위에 선을 만듭니다.
+underline : 글자 아래에 선을 만듭니다.
+initial : 기본값으로 설정합니다.
+inherit : 부모 요소의 속성값을 상속받습니다.
+
 
 자간 (em 폰트사이즈에 비례)
 letter-spacing: 0.2em;
@@ -185,3 +196,5 @@ z-index
 :after //자식의 마지막 요소
 :before // 자식의 첫번째 요소
 :active  //엑티브됐을때
+
+:nth-child(even){}  // 짝수만.
